@@ -1,11 +1,11 @@
 use axum::{Router, routing::get};
-use handler::handler::ping;
+use handler::handler::{get_companies, ping};
 
 #[tokio::main]
 async fn main() {
     let app = Router::new()
-        .route("/v1/systems/ping", get(|| ping()))
-        .route("/v1/companies", get(|| async { "companies" }));
+        .route("/v1/systems/ping", get(ping))
+        .route("/v1/companies", get(get_companies));
 
     let listener = tokio::net::TcpListener::bind("127.0.0.1:3000")
         .await

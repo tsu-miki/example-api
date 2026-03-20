@@ -13,5 +13,10 @@ members = ["handler", "driver"]
 
 [workspace.dependencies]
 handler = { path = "handler" }
+driver ={ path = "driver"}
+
 axum = "0.8.8"
 tokio = { version = "1.50.0", features = ["full"] }
+derive-new = "0.7.0"
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.149"
