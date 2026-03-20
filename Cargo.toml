@@ -1,5 +1,5 @@
 [package]
-name = "example-api"
+name = "dummy-api"
 version = "0.1.0"
 edition = "2024"
 
@@ -13,7 +13,7 @@ members = ["handler", "driver"]
 
 [workspace.dependencies]
 handler = { path = "handler" }
-driver ={ path = "driver"}
+driver = { path = "driver" }
 
 axum = "0.8.8"
 tokio = { version = "1.50.0", features = ["full"] }
